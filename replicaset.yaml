@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: MYAPP
+  labels:
+    app: MYAPP
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      app: MYAPP
+  template:
+    metadata:
+      labels:
+        app: MYAPP
+            path: /usr/share/zoneinfo/Asia/Shanghai
